@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="7">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가재골 수제비</title>
+    <script>
+        // window.location.reload();
+    </script>
+    <style>
+        .book{
+            border: solid 2px black;
+            padding: 8px;
+            border-radius: 10px;
+            width: 500px;
+            float: left;
+        }
+        .yes{
+            float: left;
+            width: 300px;
+            margin-left: 20px;
+            border: solid 2px black;
+            padding: 8px;
+            border-radius: 10px;
+        }
+        .no{
+            float: left;
+            width: 300px;
+            margin-left: 20px;
+            border: solid 2px black;
+            padding: 8px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+            <!--예액 수락-->
+            <div class="book">
+                <P>애약 수락</P>
+                <form action="/sukaebi-ok" method="POST" class="write-review">
+                    <div class="booker">
+                        <label>예약자</label><br>
+                        <input type="text" name="name"> 
+                    </div>
+                    <button type="submit" class="btn btn-primary">예약 수락</button>
+                </form>
+                <hr>
+
+                <P>애약 취소</P>
+                <form action="/sukaebi-cancle" method="POST" class="write-review">
+                    <div class="booker">
+                        <label>예약자</label><br>
+                        <input type="text" name="name"> 
+                    </div>
+                    <button type="submit" class="btn btn-primary">예약 취소</button>
+                </form>
+                <hr>
+
+                <P>영업 종료</P>
+                <form action="/sukaebi-close" method="POST" class="write-review">
+                    <button type="submit" class="btn btn-primary">영업 종료</button>
+                </form>
+            </div>
+            <div class="yes">
+                <h3>예약중</h3>
+                <% for (var i = 0; i < yes.length; i ++) { %>
+                    <div class="comment">
+                        <p>예약자: <span><%= yes[i].name %></span></p>
+                        <p>전화번호: <span><%= yes[i].phone_number %></span></p>
+                        <p>시간: <span><%= yes[i].time %></span></p>
+                    </div>
+                    <hr>
+        
+                <% } %>
+            </div>
+            <div class="no">
+                <h3>예약 대기중</h3>
+                <% for (var i = 0; i < no.length; i ++) { %>
+                    <div class="comment">
+                        <p>예약자: <span><%= no[i].name %></span></p>
+                        <p>전화번호: <span><%= no[i].phone_number %></span></p>
+                        <p>시간: <span><%= no[i].time %></span></p>
+                    </div>
+                    <hr>
+        
+                <% } %>
+            </div>
+</body>
+</html>
