@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>수락문</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        var bodywidth;
+        var navbarwidith;
+
+        $(document).ready(function(){
+          // 메뉴처리
+          $(".all").on('click',function(){
+            $(".my-card").css("display","block");
+          });
+          $(".korea").on('click',function(){
+            $(".my-card").css("display","none");
+            $(".food-inner-div #korea").css("display","block");
+          });
+          $(".china").on('click',function(){
+            $(".my-card").css("display","none");
+            $(".food-inner-div #china").css("display","block");
+          });
+          $(".japen").on('click',function(){
+            $(".my-card").css("display","none");
+            $(".food-inner-div #japen").css("display","block");
+          });
+          $(".dessert").on('click',function(){
+            $(".my-card").css("display","none");
+            $(".food-inner-div #dessert").css("display","block");
+          });
+
+        });
+        window.onload=function(){
+          bodywidth = $("html").outerWidth();
+          navbarwidith=$(".navbar").outerWidth();
+
+
+          if(bodywidth<1920)
+            {
+              $(".title").css("width","80vw");
+              $(".navbar").css("width","80vw");
+              $(".food-div").css("width","80vw");
+
+
+            }
+          else{
+            $(".title").css("width","1536px");
+            $(".navbar").css("width","1536px");
+            $(".food-div").css("width","1536px");
+
+
+          }
+
+          if(navbarwidith<1002){
+            $(".side-menu button").css("width",navbarwidith/5);
+            $(".food-card").css("width","100%")
+          }
+          else{
+            $(".side-menu button").css("width","200px");
+            $(".food-card").css("width","90%")
+          }
+          if(navbarwidith<530){
+            $(".my-card img").css("display","none");
+            $(".my-card").css("width",navbarwidith);
+          }
+          else{
+            $(".my-card img").css("display","block");
+            $(".my-card").css("width","250px");
+          }
+
+
+        };
+        window.addEventListener("resize",function() {
+          bodywidth = $("html").outerWidth();
+          navbarwidith=$(".navbar").outerWidth();
+
+          if(bodywidth<1920)
+          {
+            $(".title").css("width","80vw");
+            $(".navbar").css("width","80vw");
+            $(".food-div").css("width","80vw");
+
+
+          }
+          else{
+            $(".title").css("width","1536px");
+            $(".navbar").css("width","1536px");
+            $(".food-div").css("width","1536px");
+          }
+
+          if(navbarwidith<1002){
+            $(".side-menu button").css("width",navbarwidith/5);
+            $(".food-card").css("width","100%")
+          }
+          else{
+            $(".side-menu button").css("width","200px");
+            $(".food-card").css("width","90%")
+          }
+
+          if(navbarwidith<530){
+            $(".my-card img").css("display","none");
+            $(".my-card").css("width",navbarwidith);
+          }
+          else{
+            $(".my-card img").css("display","block");
+            $(".my-card").css("width","250px");
+          }
+        
+
+
+        });
+
+    </script>
+
+<style>
+    a{
+        text-decoration: none;
+    }
+    body{
+      width: 80vw;
+      margin: auto;
+    }
+    /* 제목 */
+    .title{
+        width: 80vw;
+        height: auto;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .main-title{
+        margin: auto;
+        width: 200px;
+        text-align: center;
+    }
+    .nowon-logo{
+        height: 41px;
+        object-fit: contain;
+        float: left;
+        margin-left: 10px;
+    }
+    .title-pont{
+        height: 41px;
+        object-fit: contain;
+        margin: auto;
+    }
+    /* 메뉴 */
+    #navbar{
+        padding: 0px;
+        margin: auto;
+        margin-bottom: 16px;
+    }
+
+    .container-fluid{
+        padding: 8px;
+        width: 80vw;
+        height: auto;
+        background-color: #1dd369;
+        border-radius: 7px;
+    }
+    /*food-div 박스*/
+    .food-div{
+      margin: auto;
+    }
+
+    /* side-menu */
+    .side-menu button{
+      border: 1px solid rgb(172, 162, 162);
+      outline: 0;
+      background-color: rgba( 255, 255, 255, 0 );
+      width: 200px;
+      border-radius: 8px;
+      text-align: center;
+      padding: 8px;
+
+    }
+    .side-menu{
+      float: left;
+      width: 100%;
+      margin-bottom: 8px;
+      
+    }
+    .side-menu ul{
+      padding: 0;
+      list-style-type: none;
+      margin: 0 auto;
+      display: table;
+    }
+    .side-menu li{
+      margin-bottom: 0px;
+      border-radius: 10px;
+      float: left;
+    }
+    /* 식당 카드 */
+    .food-card{
+      width: 100%;
+      margin: auto;
+      height: auto;
+    }
+    .food-inner-div{
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .my-card{
+      float: left;
+      margin-bottom: 8px;
+      width: 250px;
+
+      border: 1px solid rgb(147, 139, 139);
+      padding: 3px;
+      border-radius: 10px;
+      margin: 8px;
+      display: block;
+      
+    }
+    .my-card img{
+      border-radius: 10px;
+      width: 100%;
+      object-fit: contain;
+      margin-bottom: 16px;
+      margin: auto;
+    }
+    .my-card p{
+      margin: 16px;
+    }
+    .my-card a{
+      width: 100px;
+      margin-left: 8px;
+    }
+
+
+</style>  
+</head>
+  <body>
+    <!--웹 제목-->
+    <div class="title">
+        <img src="/images/노원구로고.png" class="nowon-logo">
+        <h1 class="main-title"><img src="/images/수락문.png" class="title-pont"></h1>
+    </div>
+    <!--웹 메뉴-->
+    <nav class="navbar navbar-expand-lg bg-light" id="navbar">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="color: #ffffff;">수락문</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/hiking" style="color: #ffffff;">등산코스</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/park" style="color: #ffffff;">주차안내</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #ffffff;">
+                먹자골목
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/restaurant">식당</a></li>
+                <li><a class="dropdown-item" href="/book">예약</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    <!--식당 박스-->
+    <div class="food-div">
+      <!--종류별 메뉴바-->
+      <div class="side-menu">
+        <ul >
+          <li ><button class="all">전체</button></li>
+          <li ><button class="korea">한식</button></li>
+          <li ><button class="china">중식</button></li>
+          <li ><button class="japen">일식</button></li>
+          <li ><button class="dessert">디저트</button></li>
+        </ul>
+      </div>
+
+      <!--식당 카드 박스-->
+      <div class="food-card">
+        <div class="food-inner-div">
+
+          <div class="my-card" id="korea" >
+            <img src="/images/생선구이.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">생선구이</h5>
+              <p>시래기국과 화덕 생선구이</p>
+
+              <a href="/fish" class="btn btn-primary">방문</a>
+            </div>
+          </div>
+
+          <div class="my-card" id="dessert" >
+            <img src="/images/설빙.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">설빙</h5>
+              <p>프렌차이즈 빙수</p>
+
+              <a href="/snow" class="btn btn-primary">방문</a>
+            </div>
+          </div>
+
+          <div class="my-card" id="japen" >
+            <img src="/images/쿠마키친.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">쿠마키친</h5>
+              <p>돈까스 집</p>
+
+              <a href="/dongas" class="btn btn-primary">방문</a>
+            </div>
+          </div>
+
+          <div class="my-card" id="china" >
+            <img src="/images/팔선당.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">팔선당</h5>
+              <p>불맛 짬뽕</p>
+
+              <a href="/palsundang" class="btn btn-primary">방문</a>
+            </div>
+          </div>
+
+          <div class="my-card" id="korea" >
+            <img src="/images/항아리.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">가재골 수제비</h5>
+              <p>얼큰한 수제비</p>
+
+              <a href="/sukaebi" class="btn btn-primary">방문</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  </body>
+</html>

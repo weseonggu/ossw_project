@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>수락문</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        var bodywidth;
+        var navbarwidith;
+        var mapwidth;
+        var acor;
+        $(document).ready(function(){
+
+        });
+        window.onload=function(){
+          bodywidth = $("html").outerWidth();
+          navbarwidith=$(".navbar").outerWidth();
+          mapwidth=navbarwidith-656;
+          map=$(".ml").outerWidth();
+          acor=navbarwidith-396;
+          if(bodywidth<1920)
+            {
+              $(".title").css("width","80vw");
+              $(".navbar").css("width","80vw");
+              $(".carousel-img").css("width","79vw");
+              $(".location").css("width","80vw");
+            }
+          else{
+            $(".title").css("width","1536px");
+            $(".navbar").css("width","1536px");
+            $(".carousel-img").css("width","1513px");
+            $(".location").css("width","1536px");
+          }
+          if(navbarwidith>1130){
+            $(".ml").css("width","450");
+            $(".accordion").css("margin-top","0px").css("width","400px").css("margin-left","8px");
+            $(".card").css("width","220px");
+
+          }
+          else if(navbarwidith>810 && navbarwidith<=1130){
+            if(mapwidth>380){
+              $(".ml").css("width",mapwidth);
+              $(".accordion").css("margin-top","0px").css("width","400px").css("margin-left","8px").css("float","right");
+              $(".card").css("width","220px");
+            }
+            else{
+              $(".ml").css("width","380px");
+              $(".accordion").css("float","left").css("margin-left","0px").css("width",acor);
+              $(".card").css("width","220px").css("margin-top","8px");
+            }
+          }
+          else{
+            $(".ml").css("width",navbarwidith);
+            $(".card").css("width",navbarwidith).css("margin-top","8px");
+            $(".accordion").css("width",navbarwidith).css("margin-top","8px");
+          }
+
+        };
+        window.addEventListener("resize",function() {
+          bodywidth = $("html").outerWidth();
+          navbarwidith=$(".navbar").outerWidth();
+          mapwidth=navbarwidith-656;
+          map=$(".ml").outerWidth();
+          acor=navbarwidith-396;
+          if(bodywidth<1920)
+          {
+            $(".title").css("width","80vw");
+            $(".navbar").css("width","80vw");
+            $(".carousel-img").css("width","79vw");
+            $(".location").css("width","80vw");
+          }
+          else{
+            $(".title").css("width","1536px");
+            $(".navbar").css("width","1536px");
+            $(".carousel-img").css("width","1513px");
+            $(".location").css("width","1536px");
+          }
+
+          if(navbarwidith>1130){
+            $(".ml").css("width","450");
+            $(".accordion").css("margin-top","0px").css("width","400px").css("margin-left","8px").css("float","right");
+            $(".card").css("width","220px");
+
+          }
+          else if(navbarwidith>810 && navbarwidith<=1130){
+            if(mapwidth>380){
+              $(".ml").css("width",mapwidth);
+              $(".accordion").css("margin-top","0px").css("width","400px").css("margin-left","8px").css("float","right");
+              $(".card").css("width","220px");
+            }
+            else{
+              $(".ml").css("width","380px");
+              $(".accordion").css("float","left").css("margin-left","0px").css("width",acor);
+              $(".card").css("width","220px").css("margin-top","8px");
+            }
+          }
+          else{
+            $(".ml").css("width",navbarwidith);
+            $(".card").css("width",navbarwidith).css("margin-top","8px");
+            $(".accordion").css("width",navbarwidith).css("margin-top","8px");
+          }
+        });
+
+    </script>
+
+<style>
+    a{
+        text-decoration: none;
+    }
+    body{
+      width: 80vw;
+      margin: auto;
+    }
+    /* 제목 */
+    .title{
+        width: 80vw;
+        height: auto;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .main-title{
+        margin: auto;
+        width: 200px;
+        text-align: center;
+    }
+    .nowon-logo{
+        height: 41px;
+        object-fit: contain;
+        float: left;
+        margin-left: 10px;
+    }
+    .title-pont{
+        height: 41px;
+        object-fit: contain;
+        margin: auto;
+    }
+    /* 메뉴 */
+    #navbar{
+        padding: 0px;
+        margin: auto;
+    }
+
+    .container-fluid{
+        padding: 8px;
+        width: 80vw;
+        height: auto;
+        background-color: #1dd369;
+        border-radius: 7px;
+    }
+    /* 캐러셀 */
+    .carousel-img{
+        height: auto;
+        margin: auto;
+        margin-top: 6px;
+    }
+
+    #cnimg{
+        width: 100%;
+        height: 450px;
+        object-fit: contain;
+        background-color: #3dec86;
+        border-radius: 30px;
+    }
+    /* 지도 */
+    .location{
+        margin: auto;
+        margin-top: 16px;
+        
+        
+    }
+    .ml{
+        border-radius: 10px;
+        float: left;
+        margin-right: 16px;
+    }
+    .accordion{
+      float: right;
+    }
+
+
+</style>  
+</head>
+  <body>
+    <!--웹 제목-->
+    <div class="title">
+        <img src="/images/노원구로고.png" class="nowon-logo">
+        <h1 class="main-title"><img src="/images/수락문.png" class="title-pont"></h1>
+    </div>
+    <!--웹 메뉴-->
+    <nav class="navbar navbar-expand-lg bg-light" id="navbar">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="color: #ffffff;">수락문</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/hiking" style="color: #ffffff;">등산코스</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/park" style="color: #ffffff;">주차안내</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #ffffff;">
+                먹자골목
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/restaurant">식당</a></li>
+                <li><a class="dropdown-item" href="/book">예약</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    
+
+      <!--캐러셀 이미지-->
+      <div class="carousel-img">
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="/images/내수락문.jpg" class="d-block w-100" alt="..." id="cnimg">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="/images/입구.jpg" class="d-block w-100" alt="..." id="cnimg">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="/images/계곡.jpg" class="d-block w-100" alt="..." id="cnimg">
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="/images/길거리.jpg" class="d-block w-100" alt="..." id="cnimg">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+    <!--수락산 지도-->
+    <div class="location">
+        <!--지도-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3157.8644149688785!2d127.05336531544124!3d37.67589357977755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb92750206ecf%3A0x102c6aef8101fd75!2z7ISc7Jq47Yq567OE7IucIOuFuOybkOq1rCDsg4Hqs4Qx64-ZIDExMTgtNw!5e0!3m2!1sko!2skr!4v1669029758292!5m2!1sko!2skr" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="ml"></iframe>
+        
+        <!--수락문 소개-->
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                  즐길거리 1
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                <div class="accordion-body">
+                  <strong>등산</strong> <br>수락산에 왔으면 등산이죠. 등산하고 좋은 경치를 보세요
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    즐길거리 2
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                <div class="accordion-body">
+                  <strong>먹자골목</strong> <br>오랜 시간동안 자리를 지켜온 맛집들이 득실한 먹자골목 가족, 친구와 즐거운 식사하고 가세요.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                    즐길거리 3
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                <div class="accordion-body">
+                  <strong>어린이 놀이터</strong><br> 어린이들이 계곡에서 재미있는시간을보내고 부모와 어린아이와 재미있는시간을 보낼 수 있는 시설이 준비도어있어요.
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!--오는길 설명-->
+        <div class="card" style="width: 220px;">
+            <div class="card-body">
+              <h5 class="card-title">오시는길</h5>
+              <p class="card-text">수락산역 (7호선) 3번출구 <br>
+              직진후 사거리에서 좌측</p>
+              <button type="button" class="btn btn-success"><a href="https://map.naver.com/v5/directions/-/14143771.551714446,4533770.914537281,%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EB%85%B8%EC%9B%90%EA%B5%AC%20%EB%8F%99%EC%9D%BC%EB%A1%9C242%EA%B8%B8%201,,ADDRESS_POI/-/transit?c=14143613.5256974,4533770.9145373,16.56,0,0,0,dh" style="color:#ffffff;" target="_blank">네이버 지도</a></button>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+  </body>
+</html>

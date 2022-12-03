@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>수락문</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        var bodywidth;
+        var navbarwidith;
+        $(document).ready(function(){
+
+        });
+        window.onload=function(){
+            bodywidth = $("html").outerWidth();
+            navbarwidith=$(".navbar").outerWidth();
+            if(bodywidth<1920)
+            {
+              $(".title").css("width","80vw");
+              $(".navbar").css("width","80vw");
+              $(".parkdiv").css("width","80vw");
+            }
+            else{
+            $(".title").css("width","1536px");
+            $(".navbar").css("width","1536px");
+            $(".parkdiv").css("width","1536px");
+            }
+
+            if(navbarwidith < 917){
+                $(".park-map").css("width",navbarwidith);
+                $(".card").css("width",navbarwidith);
+                $(".notice").css("width",navbarwidith);
+                $(".side").css("margin-left","0px")
+                $(".side").css("margin-top","16px")
+            }
+            else{
+                $(".park-map").css("width","600px");
+                $(".card").css("width","280px");
+                $(".notice").css("width","280px");
+                $(".side").css("margin-top","0px")
+                $(".side").css("margin-left","16px")
+            }
+
+            
+        };
+
+        window.addEventListener("resize",function() {
+            bodywidth = $("html").outerWidth();
+            navbarwidith=$(".navbar").outerWidth();
+            if(bodywidth<1920){
+                $(".title").css("width","80vw");
+                $(".navbar").css("width","80vw");
+                $(".parkdiv").css("width","80vw");
+            }
+            else{
+                $(".title").css("width","1536px");
+                $(".navbar").css("width","1536px");
+                $(".parkdiv").css("width","1536px");
+            }
+
+            if(navbarwidith < 917){
+                $(".park-map").css("width",navbarwidith);
+                $(".card").css("width",navbarwidith);
+                $(".notice").css("width",navbarwidith);
+                $(".side").css("margin-left","0px")
+                $(".side").css("margin-top","16px")
+            }
+            else{
+                $(".park-map").css("width","600px");
+                $(".card").css("width","280px");
+                $(".notice").css("width","280px");
+                $(".side").css("margin-top","0px")
+                $(".side").css("margin-left","16px")
+            }
+        });
+
+
+    </script>
+<style>
+    body{
+        width: 80vw;
+        margin: auto;
+    }
+    .title{
+        width: 80vw;
+        height: auto;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .main-title{
+        margin: auto;
+        width: 200px;
+        text-align: center;
+    }
+    .nowon-logo{
+        height: 41px;
+        object-fit: contain;
+        float: left;
+        margin-left: 10px;
+    }
+    .title-pont{
+        height: 41px;
+        object-fit: contain;
+        margin: auto;
+    }
+    
+    #navbar{
+        padding: 0px;
+        width: 80vw;
+        margin: auto;
+    }
+
+    .container-fluid{
+        width: 80vw;
+        height: auto;
+        background-color: #1dd369;
+        border-radius: 7px;
+    }
+
+
+
+
+    /* 주차장 */
+    .parkdiv{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin-top: 6px;
+    }
+    .park-map{
+        margin: auto;
+        border-radius: 20px;
+        float: left;
+    }
+    .card{
+        width: 280px;
+        float: left;
+        border-radius: 20px;
+        
+    }
+    .side{
+        margin-left: 16px;
+        float: left;
+        border-radius: 15px;
+        width: 280px;
+    }
+    .notice{
+        border: solid rgb(197, 188, 188) 2px;
+        border-radius: 20px;
+        margin-bottom: 8px;
+    }
+    .use{
+        margin: 8px;
+    }
+    
+</style>  
+</head>
+  <body>
+    <!--웹 제목-->
+    <div class="title">
+        <img src="/images/노원구로고.png" class="nowon-logo">
+        <h1 class="main-title"><img src="/images/수락문.png" class="title-pont"></h1>
+    </div>
+
+    <!--웹 메뉴-->
+    <nav class="navbar navbar-expand-lg bg-light" id="navbar">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/" style="color: #ffffff;">수락문</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/hiking" style="color: #ffffff;">등산코스</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/park" style="color: #ffffff;">주차안내</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #ffffff;">
+                먹자골목
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/eatroad">먹자골목</a></li>
+                <li><a class="dropdown-item" href="/restaurant">식당</a></li>
+                <li><a class="dropdown-item" href="/book">예약</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+
+
+    
+
+    <div class="parkdiv">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6315.760346144033!2d127.04961597678438!3d37.67552332887811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cb920b1e35a37%3A0x6064f1b4c211f0af!2z64W47IOB6rO17JiB7KO87LCo7J6lIOyImOudveyCsOuUlOyekOyduOyEnOyauOqxsOumrA!5e0!3m2!1sko!2skr!4v1669248632357!5m2!1sko!2skr" width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="park-map"></iframe>
+        <div class="side">
+            <div class="notice">
+                <h3 class="use">이용안내</h3>
+                <blockquote>
+                    <p class="use">이용시간: <br>
+                        이용요금: <br>
+                        </p>
+                </blockquote>
+
+            </div>
+
+
+        
+        
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                <h5 class="card-title">로드뷰</h5>
+                <button type="button" class="btn btn-success"><a href="https://map.naver.com/v5/search/%EC%88%98%EB%9D%BD%EC%82%B0%EC%97%AD%20%EC%A3%BC%EC%B0%A8?c=14143933.3860614,4533628.9122828,17.3,0,0,3,dha&p=8-uyUcBxzwINgOaCrppocQ,112.94,0,80,Float" style="color:#ffffff;" target="_blank">네이버 지도</a></button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    </body>
+</html>
