@@ -91,7 +91,7 @@ app.get('/fish', function(req, res) {
     for(var i =0; i<result.length;i++){
       sum+=parseInt(result[i].score);
     }
-    avg=sum/result.length;
+    avg=(sum/result.length).toFixed(1);
     res.render('fish.ejs', {review : result, avgdata : avg});
   })
 })
@@ -112,7 +112,7 @@ app.get('/dongas', function(req, res) {
     for(var i =0; i<result.length;i++){
       sum+=parseInt(result[i].score);
     }
-    avg=sum/result.length;
+    avg=(sum/result.length).toFixed(1);
     res.render('dongas.ejs', {review : result, avgdata : avg});
   })
 })
@@ -133,7 +133,7 @@ app.get('/palsundang', function(req, res) {
     for(var i =0; i<result.length;i++){
       sum+=parseInt(result[i].score);
     }
-    avg=sum/result.length;
+    avg=(sum/result.length).toFixed(1);
     res.render('palsundang.ejs', {review : result, avgdata : avg});
   })
 })
@@ -154,7 +154,7 @@ app.get('/snow', function(req, res) {
     for(var i =0; i<result.length;i++){
       sum+=parseInt(result[i].score);
     }
-    avg=sum/result.length;
+    avg=(sum/result.length).toFixed(1);
     res.render('snow.ejs', {review : result, avgdata : avg});
   })
 })
@@ -175,7 +175,7 @@ app.get('/sukaebi', function(req, res) {
     for(var i =0; i<result.length;i++){
       sum+=parseInt(result[i].score);
     }
-    avg=sum/result.length;
+    avg=(sum/result.length).toFixed(1);
     res.render('sukaebi.ejs', {review : result, avgdata : avg});
   })
 })
